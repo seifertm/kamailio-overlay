@@ -166,7 +166,6 @@ DEPEND="app-text/docbook2X
 	kamailio_modules_lcr?					( dev-libs/libpcre )
 	kamailio_modules_ldap?					( net-nds/openldap )
 	kamailio_modules_log_systemd?			( sys-apps/systemd )
-	kamailio_modules_mediaproxy?			( net-proxy/mediaproxy )
 	kamailio_modules_memcached?				( dev-libs/libmemcached net-misc/memcached )
 	kamailio_modules_misc_radius?			( >=net-dialup/radiusclient-ng-0.5.0 )
 	kamailio_modules_ndb_mongodb?			( dev-libs/mongo-c-driver )
