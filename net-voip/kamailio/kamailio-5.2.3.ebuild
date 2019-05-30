@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -295,10 +295,4 @@ pkg_preinst() {
 
 	insinto /etc/default
 	newins "${FILESDIR}/${PN}.default" ${PN}
-}
-
-pkg_postinst() {
-	ewarn "**************************** Warning! ******************************"
-	ewarn "Preliminary ebuild - Use with caution"
-	ewarn "**************************** Warning! ******************************"
 }
