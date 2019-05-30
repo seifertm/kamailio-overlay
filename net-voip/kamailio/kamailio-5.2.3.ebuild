@@ -129,7 +129,6 @@ kamailio_modules_topos?          ( kamailio_modules_rr || ( kamailio_modules_db_
 
 DEPEND="app-text/docbook2X
 	kamailio_modules_acc?				( >=net-dialup/radiusclient-ng-0.5.0 )
-	kamailio_modules_app_java?			( >=virtual/jdk-1.6 dev-java/gcj-jdk )
 	kamailio_modules_app_lua?			( dev-lang/lua )
 	kamailio_modules_app_mono?			( dev-lang/mono )
 	kamailio_modules_app_perl?			( dev-lang/perl dev-perl/perl-ldap dev-perl/IPC-Shareable )
