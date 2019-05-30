@@ -1,0 +1,2 @@
+# Masked due to missing ebuild for Thrift
+net-voip/kamailio kamailio_modules_db_cassandra kamailio_modules_ndb_cassandra
