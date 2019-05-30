@@ -209,7 +209,6 @@ pkg_setup() {
 }
 
 src_configure() {
-	cd "${S}"
 	for i in ${IUSE_KAMAILIO_MODULES}; do
 		if use $i; then
 			KAMODULES="${KAMODULES} $(echo $i | sed -e 's/kamailio_modules_//g')"
@@ -284,8 +283,8 @@ pkg_preinst() {
 	enewuser  ${PN} -1 -1 /var/run/${PN} ${PN}
 	eend $?
 
-	chown -R root:${PN}  ${D}/etc/${PN}
-	chmod -R u=rwX,g=rX,o= ${D}/etc/${PN}
+	chown -R root:${PN}  "${D}/etc/${PN}"
+	chmod -R u=rwX,g=rX,o= "${D}/etc/${PN}"
 
 	systemd_dounit "${FILESDIR}/${PN}.service"
 
