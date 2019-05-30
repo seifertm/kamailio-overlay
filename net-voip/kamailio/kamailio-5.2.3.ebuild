@@ -162,7 +162,7 @@ DEPEND="app-text/docbook2X
 	kamailio_modules_janssonrpcc?			( dev-libs/jansson dev-libs/libevent )
 	kamailio_modules_json?					( dev-libs/json-c )
 	kamailio_modules_jsonrpcc?				( dev-libs/json-c dev-libs/libevent sys-libs/glibc )
-	kamailio_modules_kazoo?					( dev-libs/json-c net-misc/rabbitmq-server dev-erlang/uuid )
+	kamailio_modules_kazoo?					( dev-libs/json-c net-misc/rabbitmq-server sys-apps/util-linux )
 	kamailio_modules_lcr?					( dev-libs/libpcre )
 	kamailio_modules_ldap?					( net-nds/openldap )
 	kamailio_modules_log_systemd?			( sys-apps/systemd )
