@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 python3_{5,6,7} )
 
 inherit eutils flag-o-matic python-single-r1 toolchain-funcs multilib user systemd
 
@@ -25,6 +25,8 @@ REQUIRED_USE="
 	kamailio_modules_acc_radius?     ( kamailio_modules_acc )
 	kamailio_modules_alias_db?       ( || ( kamailio_modules_db_berkeley kamailio_modules_db_cassandra kamailio_modules_db_cluster kamailio_modules_db_flatstore kamailio_modules_db_mongodb kamailio_modules_db_mysql kamailio_modules_db_oracle kamailio_modules_db_perlvdb kamailio_modules_db_postgres kamailio_modules_db_sqlite kamailio_modules_db_text kamailio_modules_db_unixodbc ) )
 	kamailio_modules_app_perl?       ( kamailio_modules_sl )
+	kamailio_modules_app_python? ( ${PYTHON_REQUIRED_USE} )
+	kamailio_modules_app_python3? ( ${PYTHON_REQUIRED_USE} )
 	kamailio_modules_async?          ( kamailio_modules_tm kamailio_modules_tmx )
 	kamailio_modules_auth_ephemeral? ( kamailio_modules_auth )
 	kamailio_modules_auth_db?        ( kamailio_modules_auth || ( kamailio_modules_db_mysql kamailio_modules_db_postgres kamailio_modules_db_text ) )
@@ -132,7 +134,8 @@ DEPEND="app-text/docbook2X
 	kamailio_modules_app_lua?			( dev-lang/lua )
 	kamailio_modules_app_mono?			( dev-lang/mono )
 	kamailio_modules_app_perl?			( dev-lang/perl dev-perl/perl-ldap dev-perl/IPC-Shareable )
-	kamailio_modules_app_python?		( dev-lang/python:2.7 )
+	kamailio_modules_app_python?		( ${PYTHON_DEPS} )
+	kamailio_modules_app_python3?		( ${PYTHON_DEPS} )
 	kamailio_modules_auth_ephemeral?	( dev-libs/openssl )
 	kamailio_modules_auth_identity?		( >dev-libs/openssl-0.9.8 net-misc/curl )
 	kamailio_modules_auth_radius?		( >=net-dialup/radiusclient-ng-0.5.0 )
